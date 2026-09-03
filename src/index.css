@@ -191,6 +191,101 @@ h1 {
   letter-spacing: -3px;
 }
 
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 72px;
+}
+
+.course-card {
+  display: flex;
+  min-height: 265px;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid #d9e4da;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 24px rgba(24, 37, 31, 0.04);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.course-card:hover {
+  border-color: #82b597;
+  box-shadow: 0 16px 30px rgba(24, 37, 31, 0.1);
+  transform: translateY(-4px);
+}
+
+.course-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.course-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 7px;
+  background: #dff1e4;
+  color: #1f7a51;
+  font-family: 'DM Mono', monospace;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.course-category {
+  color: #718178;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.course-card h2 {
+  margin: 26px 0 12px;
+  color: #18251f;
+  font-size: 25px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.course-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #718178;
+  font-size: 13px;
+}
+
+.detail-divider {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #9caf9f;
+}
+
+.course-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 24px;
+  color: #1f7a51;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.course-link span {
+  font-size: 18px;
+  transition: transform 180ms ease;
+}
+
+.course-link:hover span {
+  transform: translateX(4px);
+}
+
 @media (max-width: 820px) {
   .navbar {
     min-height: 68px;
@@ -247,6 +342,11 @@ h1 {
   .page-content {
     padding: 84px 20px;
   }
+
+  .course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 52px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -258,5 +358,13 @@ h1 {
     width: 31px;
     height: 31px;
     font-size: 11px;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    min-height: 240px;
   }
 }
