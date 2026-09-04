@@ -17,6 +17,43 @@ public class Course {
     private String level;
     private String duration;
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getInstructor() {
+        return instructor;
+    }
+
+    public void setInstructor(String instructor) {
+        this.instructor = instructor;
+    }
+
+    public Integer getLessons() {
+        return lessons;
+    }
+
+    public void setLessons(Integer lessons) {
+        this.lessons = lessons;
+    }
+
+    public Double getRating() {
+        return rating;
+    }
+
+    public void setRating(Double rating) {
+        this.rating = rating;
+    }
+
+    private String description;
+    private String instructor;
+    private Integer lessons;
+    private Double rating;
+
     public Course() {
     }
 
