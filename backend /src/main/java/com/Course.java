@@ -25,6 +25,7 @@ public class Course {
         this.description = description;
     }
 
+
     public String getInstructor() {
         return instructor;
     }
